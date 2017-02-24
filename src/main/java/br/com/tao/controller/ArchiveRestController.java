@@ -30,10 +30,11 @@ import io.swagger.annotations.ApiResponses;
 @RestController
 @RequestMapping("/archive")
 @Api(value = "/archive", description = "Serviço que controla todo o Rest para as ações sobre o Arquivo")
-@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 1, // 1 MB
-		maxFileSize = 1024 * 1024 * 10, // 10 MB
-		maxRequestSize = 1024 * 1024 * 15 // 15 MB
-)
+@MultipartConfig(fileSizeThreshold = 1024 * 1024
+		* 1/*
+			 * , // 1 MB maxFileSize = 1024 * 1024 * 10, // 10 MB maxRequestSize
+			 * = 1024 * 1024 * 15 // 15 MB
+			 */)
 @Produces({ "application/json", "application/xml" })
 public class ArchiveRestController {
 

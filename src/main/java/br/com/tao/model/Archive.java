@@ -5,35 +5,49 @@ import java.text.DecimalFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(value="Archive", description = "Classe Utilizada no sistema para os uploads de arquivos")
 public class Archive {
 
+	@ApiModelProperty(value = "Propriedade que retorna o identificador do Arquivo", required = true)
 	@JsonProperty("id")
 	private long id;
 
+	@ApiModelProperty(value = "Propriedade que retorna usuário responsável pelo upload do Arquivo", required = true)
 	@JsonProperty("userName")
 	private String userName;
 
+	@ApiModelProperty(value = "Propriedade que retorna o tipo do Arquivo", required = true)
 	@JsonProperty("mimetypeFile")
 	private String mimetypeFile;
 
+	@ApiModelProperty(value = "Propriedade que retorna o nome do Arquivo", required = true)
 	@JsonProperty("nameFile")
 	private String nameFile;
 
+	@ApiModelProperty(value = "Propriedade que retorna o identificador do Arquivo", required = true)
 	@JsonProperty("idFile")
 	private long idFile;
 
+	@ApiModelProperty(value = "Propriedade que retorna o conteúdo do Arquivo", required = true)
 	@JsonProperty("contentFile")
 	private byte[] contentFile;
 
+	@ApiModelProperty(value = "Propriedade que retorna o tamanho do Arquivo", required = true)
 	@JsonProperty("sizeFile")
 	private Long sizeFile;
 
+	@ApiModelProperty(value = "Propriedade que retorna o tamanho do Arquivo já tratado", required = true)
 	@JsonProperty("sizeFileStr")
 	private String sizeFileStr;
 
+	@ApiModelProperty(value = "Propriedade que retorna o status do Arquivo", required = true)
 	@JsonProperty("Status")
 	private Status Status;
 
+	@ApiModelProperty(value = "Propriedade que retorna o tempo de upload do Arquivo", required = true)
 	@JsonProperty("timeUpload")
 	private String timeUpload;
 
@@ -131,6 +145,7 @@ public class Archive {
 		Status = status;
 	}
 
+	@ApiModelProperty(value = "Propriedade que retorna o Status do arquivo", required = true)
 	@JsonProperty("statusStr")
 	public String getStatusStr() {
 		return Status.toString();
