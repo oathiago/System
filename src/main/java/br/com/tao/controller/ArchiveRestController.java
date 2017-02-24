@@ -58,7 +58,7 @@ public class ArchiveRestController {
 	@ApiOperation(value = "Listar todos os Arquivos", notes = "Método que realiza o upload de um novo arquivo utilizando AngularJs", consumes = "application/json", produces = "application/json"
 
 	)
-	public ResponseEntity<Void> createArchive(@RequestBody Archive archive, UriComponentsBuilder ucBuilder) {
+	public ResponseEntity<Void> createArchive(@ApiParam(value = "Arquivo que será incluído no sistema.", required = true) @RequestBody Archive archive, UriComponentsBuilder ucBuilder) {
 		System.out.println("Inserindo Arquivo " + archive.getUserName());
 		archiveService.saveArchive(archive);
 
