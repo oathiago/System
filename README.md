@@ -9,3 +9,5 @@ Para rodar o projeto basta apenas fazer o Maven Install do Projeto e colocar o s
 
 Server utilizado para o Desenvolvimento: apache-tomcat-8.0.41.
 Telas desenvolvidas em AngularJs.
+
+Infelizmente, mesmo eu colocando a anotação "@JsonIgnore" nos métodos "gets" dentro classe de modelo, as propriedades ainda continuam retornando para a tela.
