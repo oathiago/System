@@ -1,4 +1,4 @@
-# System
+# System – Thiago Augusto
 
 Sistema criado pelo Desenvolvedor Thiago Augusto para a Hotmart.
 
@@ -33,7 +33,5 @@ http://localhost:8080/system/archive/createArchive
 Exemplo de post para deletar um arquivo:
 http://localhost:8080/system/archive/deleteArchive/{id}
 
-
 Tela em Angular do projeto:
 http://localhost:8080/system/
-
